@@ -1,0 +1,36 @@
+name: 🐞 Bug Report
+description: Report a problem you encountered with the Telegram bot
+title: "[Bug] "
+labels: [bug, telegram-bot]
+assignees: [mnasibzade]
+body:
+  - type: input
+    attributes:
+      label: Affected Command or Feature
+      description: Which command or part of the bot is not working?
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: What happened?
+      description: Clearly describe the bug you experienced
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Steps to reproduce
+      description: How can we reproduce the issue?
+      placeholder: |
+        1. Run command /alpha
+        2. Bot returns an error
+        3. Expected result: ...
+        4. Actual result: ...
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Screenshots or Logs
+      description: Attach any related screenshots or logs
