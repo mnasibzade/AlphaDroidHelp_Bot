@@ -58,9 +58,6 @@ There are many platforms you can explore, such as Railway, Render, Replit, or tr
 
 If everything is set up correctly, you’ll see the bot is running and waiting for commands.
 
-
-3. **Run and enjoy!** 🎉
-
 ---
 
 ## 🔧 Commands
