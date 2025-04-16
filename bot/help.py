@@ -3,14 +3,14 @@ from telegram.ext import CallbackContext
 
 async def help(update: Update, context: CallbackContext) -> None:
     await update.message.reply_text(
-        "Hello, I am a bot written for AlphaDroid. My mission is to provide support to AlphaDroid users and make my team's job easier!\n"
+        "Hello, I am a bot written for AlphaDroid. My mission is to provide support to AlphaDroid users and make my team's job easier!\n\n"
         "Here's a list of my commands (sorted alphabetically):\n"
-        "/alpha <device_codename> - Get the download link for your device\n"
-        "/apply - Apply for maintainership!\n" 
-        "/contribute - If you want to support us!\n"
-        "/devices - Get the list of supported devices\n" 
-        "/releases - Check AlphaDroid releases\n"
-        "/source - Shows our source code\n"
-        "/start - Check if I am alive\n"
-        "/ui - Do you need screenshots? Use me!"
+        "/alpha <device_codename> — Get the download link for your device\n"
+        "/apply — Apply for official maintainership\n"
+        "/contribute — Learn how to support or contribute to the project\n"
+        "/devices — See the list of supported devices\n"
+        "/releases — Stay up to date with AlphaDroid releases\n"
+        "/source — View AlphaDroid’s and Bot's source code\n"
+        "/start — Make sure the bot is alive\n"
+        "/ui — Get screenshots of UI from previous versions"
     )
