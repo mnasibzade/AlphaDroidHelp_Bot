@@ -1,6 +1,7 @@
 import json
 import asyncio
 import requests
+import sys
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Application, CommandHandler, CallbackContext
 from bot.start import start
@@ -18,14 +19,14 @@ def read_token():
         with open('token.txt', 'r') as file:
             return file.read().strip()
     except FileNotFoundError:
-        print("Token file (token.txt) not found.")
+        print("Token file (token.txt) not found.", file=sys.stderr)
         return None
 
 TOKEN = read_token()
 
 if not TOKEN:
-    print("Bot token is missing. Please make sure the token.txt file exists.")
-    exit()
+    print("Bot token is missing. Please make sure the token.txt file exists.", file=sys.stderr)
+    sys.exit(1)
 
 def main():
     app = Application.builder().token(TOKEN).job_queue(None).build()

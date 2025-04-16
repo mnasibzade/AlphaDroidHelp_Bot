@@ -24,7 +24,7 @@ Follow these steps to get the AlphaDroidHelp Bot up and running on your machine:
 ### 1. **Clone the Repository**
 ```bash
 git clone https://github.com/mnasibzade/AlphaDroidHelp_Bot
-cd AlphaDroidBot
+cd AlphaDroidHelp_Bot
 ```
 
 ### 2. **Install Dependencies**
