@@ -1,9 +1,5 @@
-import json
-import asyncio
-import requests
 import sys
-from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
-from telegram.ext import Application, CommandHandler, CallbackContext
+from telegram.ext import Application, CommandHandler
 from bot.start import start
 from bot.help import help
 from bot.alpha import alpha
