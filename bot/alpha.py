@@ -5,8 +5,8 @@ import requests
 def get_download_links(device_code):
     device_code = device_code.lower()
     
-    json_url = f"https://raw.githubusercontent.com/AlphaDroid-devices/OTA/alpha-15.1/{device_code}.json"
-    changelog_url = f"https://github.com/AlphaDroid-devices/OTA/blob/alpha-15.1/changelog_{device_code}.txt"
+    json_url = f"https://raw.githubusercontent.com/AlphaDroid-devices/OTA/alpha-15.2/{device_code}.json"
+    changelog_url = f"https://github.com/AlphaDroid-devices/OTA/blob/alpha-15.2/changelog_{device_code}.txt"
 
     try:
         response = requests.get(json_url)
