@@ -1,4 +1,5 @@
 import sys
+import os
 from telegram.ext import Application, CommandHandler
 from bot.start import start
 from bot.help import help
@@ -12,7 +13,9 @@ from bot.devices import devices
 
 def read_token():
     try:
-        with open('token.txt', 'r') as file:
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        token_path = os.path.join(base_dir, 'token.txt')
+        with open(token_path, 'r') as file:
             return file.read().strip()
     except FileNotFoundError:
         print("Token file (token.txt) not found.", file=sys.stderr)
