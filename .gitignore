@@ -1,0 +1,21 @@
+# Bot Secrets
+token.txt
+config.json
+.env
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environments
+.venv/
+venv/
+env/
+
+# Logs
+*.log
+
+# IDEs
+.vscode/
+.idea/
