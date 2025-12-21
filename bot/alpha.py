@@ -38,7 +38,7 @@ def get_download_links(device_code):
             build_types.add(variant)
 
         message = (
-            f"✅ *Latest AlphaDroid for {device_code.upper()}:*\n\n"
+            f"✅ *Latest AlphaDroid for {device_code}:*\n\n"
             f"📱 Version: *{version}*\n"
             f"{status_icon} Status: *{status_text}*\n"
             f"🛠 Build Types: *{', '.join(build_types)}*\n"
