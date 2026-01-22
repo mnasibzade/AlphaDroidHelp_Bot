@@ -1,7 +1,18 @@
+import logging
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
-from telegram.ext import Application, CommandHandler, CallbackContext
+from telegram.ext import CallbackContext
+from bot.utils import safe_reply
+
+logger = logging.getLogger(__name__)
+
 
 async def ui(update: Update, context: CallbackContext) -> None:
+    if not update.message:
+        logger.warning("Received update without message in ui command")
+        return
+    
+    logger.info(f"User {update.effective_user.id} requested UI screenshots")
+    
     keyboard = [
         [InlineKeyboardButton("UI references from 4.X (Latest)", url="https://t.me/alphadroid_releases/542")],
         [InlineKeyboardButton("3.X", url="https://t.me/alphadroid_releases/478")],
@@ -12,7 +23,8 @@ async def ui(update: Update, context: CallbackContext) -> None:
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
     
-    await update.message.reply_text(
+    await safe_reply(
+        update,
         "I think you are very curious about AlphaDroid!\n"
         "You can see the screenshots of the versions by clicking the buttons below.",
         reply_markup=reply_markup
